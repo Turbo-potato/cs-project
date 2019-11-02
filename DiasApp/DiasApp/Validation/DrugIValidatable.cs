@@ -1,23 +1,20 @@
-﻿using System;
+﻿using DiasApp.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DiasApp.Models
+namespace DiasApp.Validation
 {
-    public class Drug
+    public class DrugIValidatable : IValidatableObject
     {
-        private int id;
-        private string name;
-        private string description;
-        private string type;
-        private double dosage;
-        private decimal price;
-        private List<Manufacturer> manufacturers;
+        private const string _empty = "";
 
         public int Id { set; get; }
+
+        [Required]
         public double Dosage { set; get; }
 
         [Required]
@@ -25,7 +22,11 @@ namespace DiasApp.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { set; get; }
 
+        [Required]
+        [StringLength(150)]
         public string Name { set; get; }
+
+        [Required]
         public string Type { set; get; }
 
         [StringLength(150, MinimumLength = 3)]
@@ -33,6 +34,16 @@ namespace DiasApp.Models
 
         //MANY TO MANY
         public List<DrugManufacturer> DrugManufacturers { set; get; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (Name == _empty)
+            {
+                yield return new ValidationResult(
+                    $"Drug name must not be empty!",
+                    new[] { "Name" });
+            }
+        }
 
     }
 }

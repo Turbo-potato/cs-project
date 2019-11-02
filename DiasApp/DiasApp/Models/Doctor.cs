@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,7 +14,10 @@ namespace DiasApp.Models
         private string certificate;
         private List<Patient> patients;
         public int Id { set; get; }
+
+        [Remote(action: "VerifyName", controller: "DoctorsController", AdditionalFields = nameof(Firstname))]
         public string Firstname { set; get; }
+        [Remote(action: "VerifyName", controller: "DoctorsController", AdditionalFields = nameof(Firstname))]
         public string Lastname { set; get; }
         public string Certificate { set; get; }
         //ONE doctor MANY patients

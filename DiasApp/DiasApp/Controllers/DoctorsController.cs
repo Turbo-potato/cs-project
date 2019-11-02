@@ -149,5 +149,21 @@ namespace DiasApp.Controllers
         {
             return _context.Doctor.Any(e => e.Id == id);
         }
+
+        [AcceptVerbs("Get", "Post")]
+        public IActionResult VerifyName(string firstName, string lastName)
+        {
+            /*if (!_userRepository.VerifyName(firstName, lastName))
+            {
+                return Json($"A user named {firstName} {lastName} already exists.");
+            }*/
+
+            if(firstName == "" || firstName == "")
+            {
+                return Json($"An incorrect Firstname or Lastname: {firstName} {lastName}");
+            }
+
+            return Json(true);
+        }
     }
 }
