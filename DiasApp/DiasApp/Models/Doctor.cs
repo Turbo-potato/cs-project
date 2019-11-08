@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,10 +16,13 @@ namespace DiasApp.Models
         private List<Patient> patients;
         public int Id { set; get; }
 
-        [Remote(action: "VerifyName", controller: "DoctorsController", AdditionalFields = nameof(Firstname))]
+        [Required]
+        [Remote(action: "VerifyName", controller: "Doctors", AdditionalFields = nameof(Lastname), ErrorMessage = "Firstname must not be empty")]
         public string Firstname { set; get; }
-        [Remote(action: "VerifyName", controller: "DoctorsController", AdditionalFields = nameof(Firstname))]
+        [Required]
+        [Remote(action: "VerifyName", controller: "Doctors", AdditionalFields = nameof(Firstname), ErrorMessage = "Lastname must not be empty")]
         public string Lastname { set; get; }
+        [Required(ErrorMessage = "Certificate is required")]
         public string Certificate { set; get; }
         //ONE doctor MANY patients
         public List<Patient> Patients { set; get; }

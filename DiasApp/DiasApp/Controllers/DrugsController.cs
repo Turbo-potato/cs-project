@@ -149,5 +149,23 @@ namespace DiasApp.Controllers
         {
             return _context.Drugs.Any(e => e.Id == id);
         }
+
+        [AcceptVerbs("Get", "Post")]
+        public IActionResult VerifyDescription(string description)
+        {
+            /*if (!_userRepository.VerifyName(firstName, lastName))
+            {
+                return Json($"A user named {firstName} {lastName} already exists.");
+            }*/
+            string[] arr = "@,#,^,&,*,<,/,\\,>".Split(',');
+            foreach (string s in arr)
+            {
+                if (description.Contains(s))
+                {
+                    return Json($"An description contains the ineligible symbols: @#^&*</\\>");
+                }
+            }
+            return Json(true);
+        }
     }
 }
