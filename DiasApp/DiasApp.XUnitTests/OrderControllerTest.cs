@@ -14,6 +14,15 @@ namespace DiasApp.XUnitTests
 {
     public class OrderControllerTest
     {
+
+        [Fact]
+        public async Task ConstructorTest()
+        {
+            var order = new Order(DateTime.MinValue, DateTime.Now);
+            Assert.Equal(DateTime.MinValue, order.StartTime);
+            Assert.Equal(DateTime.Now, order.EndTime);
+        }
+
         [Fact]
         public async Task InsertTest()
         {

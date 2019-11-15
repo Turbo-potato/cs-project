@@ -19,6 +19,16 @@ namespace DiasApp.Models
         private decimal price;
         private List<Manufacturer> manufacturers;
 
+        public Drug()
+        {
+
+        }
+        public Drug(string name, string description)
+        {
+            this.name = name;
+            this.description = description;
+        }
+
         public int Id { set; get; }
         [Required]
         [DrugValid]

@@ -15,6 +15,14 @@ namespace DiasApp.XUnitTests
     public class DrugsControllerTest
     {
         [Fact]
+        public async Task ConstructorTest()
+        {
+            var drug = new Drug("Meth", "Breaking Bad");
+            Assert.Equal("Meth", drug.Name);
+            Assert.Equal("Breaking Bad", drug.Description);
+        }
+
+        [Fact]
         public async Task InsertTest()
         {
             var fakeRepository = Mock.Of<IDrugRepository>();

@@ -12,6 +12,16 @@ namespace DiasApp.Models
         private DateTime startTime;
         private DateTime endTime;
 
+        public Order()
+        {
+
+        }
+        public Order(DateTime startTime, DateTime endTime)
+        {
+            this.startTime = startTime;
+            this.endTime = endTime;
+        }
+
         public int Id { set; get; }
         [Required(ErrorMessage = "StartTime is required")]
         public DateTime StartTime { set; get; }

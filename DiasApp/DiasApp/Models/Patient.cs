@@ -12,6 +12,17 @@ namespace DiasApp.Models
         private string firstname;
         private string lastname;
         private Doctor doctor;
+
+        public Patient()
+        {
+
+        }
+        public Patient(string firstname, string lastname)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+
         public int Id { set; get; }
         [Required(ErrorMessage = "Firstname is required")]
         public string Firstname { set; get; }

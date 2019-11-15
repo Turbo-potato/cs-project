@@ -14,6 +14,16 @@ namespace DiasApp.Models
         private string lastname;
         private string certificate;
         private List<Patient> patients;
+
+        public Doctor()
+        {
+
+        }
+        public Doctor(string firstname, string lastname)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
         public int Id { set; get; }
 
         [Required]

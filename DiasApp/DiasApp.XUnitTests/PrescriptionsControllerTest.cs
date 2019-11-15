@@ -14,6 +14,16 @@ namespace DiasApp.XUnitTests
 {
     public class PrescriptionsControllerTest
     {
+
+        [Fact]
+        public async Task ConstructorTest()
+        {
+            var prescription = new Prescription("Dias", "2 times a day", "For adult only, not for child");
+            Assert.Equal("Dias", prescription.PatientName);
+            Assert.Equal("2 times a day", prescription.Frequency);
+            Assert.Equal("For adult only, not for child", prescription.Instruction);
+        }
+
         [Fact]
         public async Task InsertTest()
         {

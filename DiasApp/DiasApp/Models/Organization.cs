@@ -13,6 +13,16 @@ namespace DiasApp.Models
         private string name;
         private string address;
 
+        public Organization()
+        {
+
+        }
+        public Organization(string name, string address)
+        {
+            this.name = name;
+            this.address = address;
+        }
+
         public int Id { set; get; }
         [Required(ErrorMessage = "Name is required")]
         public string Name { set; get; }

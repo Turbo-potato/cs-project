@@ -16,6 +16,17 @@ namespace DiasApp.Models
         private string frequency;
         private string instruction;
 
+        public Prescription()
+        {
+
+        }
+        public Prescription(string patientName, string frequency, string instruction)
+        {
+            this.patientName = patientName;
+            this.frequency = frequency;
+            this.instruction = instruction;
+        }
+
         public int Id { set; get; }
         [Required(ErrorMessage = "StartTime is required")]
         public DateTime StartTime { set; get; }

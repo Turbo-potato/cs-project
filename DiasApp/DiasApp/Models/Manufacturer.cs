@@ -13,6 +13,16 @@ namespace DiasApp.Models
         private string address;
         private List<Drug> drugs;
 
+        public Manufacturer()
+        {
+
+        }
+        public Manufacturer(string name, string address)
+        {
+            this.name = name;
+            this.address = address;
+        }
+
         public int Id { set; get; }
         [Required(ErrorMessage = "Name is required")]
         public string Name { set; get; }

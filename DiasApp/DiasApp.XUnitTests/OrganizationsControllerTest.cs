@@ -15,6 +15,14 @@ namespace DiasApp.XUnitTests
     public class OrganizationsControllerTest
     {
         [Fact]
+        public async Task ConstructorTest()
+        {
+            var organization = new Organization("Health inc.", @"Manasov 25/8");
+            Assert.Equal("Health inc.", organization.Name);
+            Assert.Equal(@"Manasov 25/8", organization.Address);
+        }
+
+        [Fact]
         public async Task InsertTest()
         {
             var fakeRepository = Mock.Of<IOrganizationRepository>();

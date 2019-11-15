@@ -15,6 +15,14 @@ namespace DiasApp.XUnitTests
     public class ManufacturersControllerTest
     {
         [Fact]
+        public async Task ConstructorTest()
+        {
+            var manufacturer = new Manufacturer("IITU", "Zhanodsov st.");
+            Assert.Equal("IITU", manufacturer.Name);
+            Assert.Equal("Zhanodsov st.", manufacturer.Address);
+        }
+
+        [Fact]
         public async Task InsertTest()
         {
             var fakeRepository = Mock.Of<IManufacturerRepository>();
