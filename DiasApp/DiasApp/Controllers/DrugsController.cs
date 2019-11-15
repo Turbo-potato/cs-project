@@ -10,22 +10,22 @@ using DiasApp.Models;
 
 namespace DiasApp.Controllers
 {
-    public class DrugsController : Controller
+    public class DrugController : Controller
     {
         private readonly PharmacyContext _context;
 
-        public DrugsController(PharmacyContext context)
+        public DrugController(PharmacyContext context)
         {
             _context = context;
         }
 
-        // GET: Drugs
+        // GET: Drug
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Drugs.ToListAsync());
+            return View(await _context.Drug.ToListAsync());
         }
 
-        // GET: Drugs/Details/5
+        // GET: Drug/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,7 +33,7 @@ namespace DiasApp.Controllers
                 return NotFound();
             }
 
-            var drug = await _context.Drugs
+            var drug = await _context.Drug
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (drug == null)
             {
@@ -43,13 +43,13 @@ namespace DiasApp.Controllers
             return View(drug);
         }
 
-        // GET: Drugs/Create
+        // GET: Drug/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Drugs/Create
+        // POST: Drug/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -65,7 +65,7 @@ namespace DiasApp.Controllers
             return View(drug);
         }
 
-        // GET: Drugs/Edit/5
+        // GET: Drug/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace DiasApp.Controllers
                 return NotFound();
             }
 
-            var drug = await _context.Drugs.FindAsync(id);
+            var drug = await _context.Drug.FindAsync(id);
             if (drug == null)
             {
                 return NotFound();
@@ -81,7 +81,7 @@ namespace DiasApp.Controllers
             return View(drug);
         }
 
-        // POST: Drugs/Edit/5
+        // POST: Drug/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -116,7 +116,7 @@ namespace DiasApp.Controllers
             return View(drug);
         }
 
-        // GET: Drugs/Delete/5
+        // GET: Drug/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,7 +124,7 @@ namespace DiasApp.Controllers
                 return NotFound();
             }
 
-            var drug = await _context.Drugs
+            var drug = await _context.Drug
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (drug == null)
             {
@@ -134,20 +134,38 @@ namespace DiasApp.Controllers
             return View(drug);
         }
 
-        // POST: Drugs/Delete/5
+        // POST: Drug/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var drug = await _context.Drugs.FindAsync(id);
-            _context.Drugs.Remove(drug);
+            var drug = await _context.Drug.FindAsync(id);
+            _context.Drug.Remove(drug);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool DrugExists(int id)
         {
-            return _context.Drugs.Any(e => e.Id == id);
+            return _context.Drug.Any(e => e.Id == id);
+        }
+
+        [AcceptVerbs("Get", "Post")]
+        public IActionResult VerifyDescription(string description)
+        {
+            /*if (!_userRepository.VerifyName(firstName, lastName))
+            {
+                return Json($"A user named {firstName} {lastName} already exists.");
+            }*/
+            string[] arr = "@,#,^,&,*,<,/,\\,>".Split(',');
+            foreach (string s in arr)
+            {
+                if (description.Contains(s))
+                {
+                    return Json($"An description contains the ineligible symbols: @#^&*</\\>");
+                }
+            }
+            return Json(true);
         }
     }
 }

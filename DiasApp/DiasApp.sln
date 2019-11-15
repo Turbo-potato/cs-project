@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiasApp", "DiasApp\DiasApp.csproj", "{F43A7E4B-B777-4900-A866-046E3AAA7586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiasApp", "DiasApp\DiasApp.csproj", "{F43A7E4B-B777-4900-A866-046E3AAA7586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiasApp.XUnitTests", "DiasApp.XUnitTests\DiasApp.XUnitTests.csproj", "{518A5501-3683-45E7-BEF8-D15D52AEF815}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F43A7E4B-B777-4900-A866-046E3AAA7586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F43A7E4B-B777-4900-A866-046E3AAA7586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F43A7E4B-B777-4900-A866-046E3AAA7586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518A5501-3683-45E7-BEF8-D15D52AEF815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518A5501-3683-45E7-BEF8-D15D52AEF815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518A5501-3683-45E7-BEF8-D15D52AEF815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518A5501-3683-45E7-BEF8-D15D52AEF815}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

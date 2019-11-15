@@ -19,7 +19,12 @@ namespace DiasApp.Controllers
             _context = context;
         }
 
+        /*public DoctorsController()
+        {
+        }*/
+
         // GET: Doctors
+        //[Route("Doctor/Index")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Doctor.ToListAsync());
@@ -148,6 +153,21 @@ namespace DiasApp.Controllers
         private bool DoctorExists(int id)
         {
             return _context.Doctor.Any(e => e.Id == id);
+        }
+
+        [AcceptVerbs("Get", "Post")]
+        public IActionResult VerifyName(string firstName)
+        {
+            /*if (!_userRepository.VerifyName(firstName, lastName))
+            {
+                return Json($"A user named {firstName} {lastName} already exists.");
+            }*/
+
+            if (firstName == "fuck" || firstName == "asshole" || firstName == "shit")
+            {
+                return Json($"An Ineligible Name: {firstName}"); //$"An incorrect Firstname or Lastname: {firstName}"
+            }
+            return Json(true);
         }
     }
 }

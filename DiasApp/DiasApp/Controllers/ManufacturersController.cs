@@ -10,22 +10,22 @@ using DiasApp.Models;
 
 namespace DiasApp.Controllers
 {
-    public class ManufacturersController : Controller
+    public class ManufacturerController : Controller
     {
         private readonly PharmacyContext _context;
 
-        public ManufacturersController(PharmacyContext context)
+        public ManufacturerController(PharmacyContext context)
         {
             _context = context;
         }
 
-        // GET: Manufacturers
+        // GET: Manufacturer
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Manufacturers.ToListAsync());
+            return View(await _context.Manufacturer.ToListAsync());
         }
 
-        // GET: Manufacturers/Details/5
+        // GET: Manufacturer/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,7 +33,7 @@ namespace DiasApp.Controllers
                 return NotFound();
             }
 
-            var manufacturer = await _context.Manufacturers
+            var manufacturer = await _context.Manufacturer
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (manufacturer == null)
             {
@@ -43,13 +43,13 @@ namespace DiasApp.Controllers
             return View(manufacturer);
         }
 
-        // GET: Manufacturers/Create
+        // GET: Manufacturer/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Manufacturers/Create
+        // POST: Manufacturer/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -65,7 +65,7 @@ namespace DiasApp.Controllers
             return View(manufacturer);
         }
 
-        // GET: Manufacturers/Edit/5
+        // GET: Manufacturer/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace DiasApp.Controllers
                 return NotFound();
             }
 
-            var manufacturer = await _context.Manufacturers.FindAsync(id);
+            var manufacturer = await _context.Manufacturer.FindAsync(id);
             if (manufacturer == null)
             {
                 return NotFound();
@@ -81,7 +81,7 @@ namespace DiasApp.Controllers
             return View(manufacturer);
         }
 
-        // POST: Manufacturers/Edit/5
+        // POST: Manufacturer/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -116,7 +116,7 @@ namespace DiasApp.Controllers
             return View(manufacturer);
         }
 
-        // GET: Manufacturers/Delete/5
+        // GET: Manufacturer/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,7 +124,7 @@ namespace DiasApp.Controllers
                 return NotFound();
             }
 
-            var manufacturer = await _context.Manufacturers
+            var manufacturer = await _context.Manufacturer
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (manufacturer == null)
             {
@@ -134,20 +134,20 @@ namespace DiasApp.Controllers
             return View(manufacturer);
         }
 
-        // POST: Manufacturers/Delete/5
+        // POST: Manufacturer/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var manufacturer = await _context.Manufacturers.FindAsync(id);
-            _context.Manufacturers.Remove(manufacturer);
+            var manufacturer = await _context.Manufacturer.FindAsync(id);
+            _context.Manufacturer.Remove(manufacturer);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ManufacturerExists(int id)
         {
-            return _context.Manufacturers.Any(e => e.Id == id);
+            return _context.Manufacturer.Any(e => e.Id == id);
         }
     }
 }

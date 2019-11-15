@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,11 +17,17 @@ namespace DiasApp.Models
         private string instruction;
 
         public int Id { set; get; }
+        [Required(ErrorMessage = "StartTime is required")]
         public DateTime StartTime { set; get; }
+        [Required(ErrorMessage = "EndTime is required")]
         public DateTime EndTime { set; get; }
+        [Required(ErrorMessage = "Firstname is required")]
         public string PatientName { set; get; }
+        [Required(ErrorMessage = "Quantity is required")]
         public int Quantity { set; get; }
+        [Required(ErrorMessage = "Frequency is required")]
         public string Frequency { set; get; }
+        [Required(ErrorMessage = "Instruction is required")]
         public string Instruction { set; get; }
     }
 }

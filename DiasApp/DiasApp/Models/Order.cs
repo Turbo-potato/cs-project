@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,7 +13,9 @@ namespace DiasApp.Models
         private DateTime endTime;
 
         public int Id { set; get; }
+        [Required(ErrorMessage = "StartTime is required")]
         public DateTime StartTime { set; get; }
+        [Required(ErrorMessage = "EndTime is required")]
         public DateTime EndTime { set; get; }
     }
 }

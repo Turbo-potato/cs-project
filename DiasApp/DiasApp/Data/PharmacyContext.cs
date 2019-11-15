@@ -42,11 +42,12 @@ namespace DiasApp.Data
                 .HasForeignKey<Organization>(d => d.DoctorForeignKey);
         }
 
-        public DbSet<Manufacturer> Manufacturers { get; set; }
-        public DbSet<Drug> Drugs { get; set; }
+        public DbSet<Manufacturer> Manufacturer { get; set; }
+        public DbSet<Drug> Drug { get; set; }
         public DbSet<DiasApp.Models.Doctor> Doctor { get; set; }
         public DbSet<DiasApp.Models.Organization> Organization { get; set; }
         public DbSet<DiasApp.Models.Patient> Patient { get; set; }
         public DbSet<DiasApp.Models.Order> Order { get; set; }
+        public DbSet<DiasApp.Models.Prescription> Prescription { get; set; }
     }
 }

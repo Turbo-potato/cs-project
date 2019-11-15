@@ -2,7 +2,6 @@ C:\Users\Dias\source\repos\DiasApp\DiasApp\bin\Debug\netcoreapp2.1\DiasApp.deps.
 C:\Users\Dias\source\repos\DiasApp\DiasApp\bin\Debug\netcoreapp2.1\DiasApp.runtimeconfig.json
 C:\Users\Dias\source\repos\DiasApp\DiasApp\bin\Debug\netcoreapp2.1\DiasApp.runtimeconfig.dev.json
 C:\Users\Dias\source\repos\DiasApp\DiasApp\bin\Debug\netcoreapp2.1\DiasApp.dll
-C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\DiasApp.csprojAssemblyReference.cache
 C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\DiasApp.csproj.CoreCompileInputs.cache
 C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\DiasApp.RazorAssemblyInfo.cache
 C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\DiasApp.RazorAssemblyInfo.cs
@@ -60,3 +59,4 @@ C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\Razor\Views\O
 C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Details.g.cshtml.cs
 C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Edit.g.cshtml.cs
 C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Index.g.cshtml.cs
+C:\Users\Dias\source\repos\DiasApp\DiasApp\obj\Debug\netcoreapp2.1\DiasApp.csprojAssemblyReference.cache
