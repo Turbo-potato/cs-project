@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DiasApp.Data;
+using DiasApp.Interfaces;
+using DiasApp.Repositories;
+using DiasApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -37,6 +40,27 @@ namespace DiasApp
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<DoctorService>();
+            services.AddScoped<IDoctorRepository, DoctorRepository>();
+
+            services.AddScoped<DrugService>();
+            services.AddScoped<IDrugRepository, DrugRepository>();
+
+            services.AddScoped<ManufacturerService>();
+            services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
+
+            services.AddScoped<PrescriptionService>();
+            services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
+
+            services.AddScoped<OrderService>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+
+            services.AddScoped<OrganizationService>();
+            services.AddScoped<IOrganizationRepository, OrganizationRepository>();
+
+            services.AddScoped<PatientService>();
+            services.AddScoped<IPatientRepository, PatientRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +86,7 @@ namespace DiasApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+         
         }
     }
 }

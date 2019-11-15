@@ -19,6 +19,10 @@ namespace DiasApp.Controllers
             _context = context;
         }
 
+        /*public DoctorsController()
+        {
+        }*/
+
         // GET: Doctors
         //[Route("Doctor/Index")]
         public async Task<IActionResult> Index()

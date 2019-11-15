@@ -49,6 +49,7 @@ namespace DiasApp.Controllers
         public IActionResult Create()
         {
             ViewData["DoctorId"] = new SelectList(_context.Doctor, "Id", "Id");
+            ViewData["DoctorFirstName"] = new SelectList(_context.Doctor, "Firstname", "Firstname");
             return View();
         }
 
