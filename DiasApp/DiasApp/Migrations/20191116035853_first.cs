@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DiasApp.Migrations
 {
@@ -12,9 +13,9 @@ namespace DiasApp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Firstname = table.Column<string>(nullable: true),
-                    Lastname = table.Column<string>(nullable: true),
-                    Certificate = table.Column<string>(nullable: true)
+                    Firstname = table.Column<string>(nullable: false),
+                    Lastname = table.Column<string>(nullable: false),
+                    Certificate = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -22,34 +23,66 @@ namespace DiasApp.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Drugs",
+                name: "Drug",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Dosage = table.Column<double>(nullable: false),
-                    Price = table.Column<decimal>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Type = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true)
+                    Price = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    Name = table.Column<string>(nullable: false),
+                    Type = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(maxLength: 150, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Drugs", x => x.Id);
+                    table.PrimaryKey("PK_Drug", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Manufacturers",
+                name: "Manufacturer",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(nullable: true),
-                    Address = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: false),
+                    Address = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Manufacturers", x => x.Id);
+                    table.PrimaryKey("PK_Manufacturer", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Order",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    StartTime = table.Column<DateTime>(nullable: false),
+                    EndTime = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Order", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Prescription",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    StartTime = table.Column<DateTime>(nullable: false),
+                    EndTime = table.Column<DateTime>(nullable: false),
+                    PatientName = table.Column<string>(nullable: false),
+                    Quantity = table.Column<int>(nullable: false),
+                    Frequency = table.Column<string>(nullable: false),
+                    Instruction = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Prescription", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -58,8 +91,8 @@ namespace DiasApp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(nullable: true),
-                    Address = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
+                    Address = table.Column<string>(nullable: false),
                     DoctorForeignKey = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -79,8 +112,8 @@ namespace DiasApp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Firstname = table.Column<string>(nullable: true),
-                    Lastname = table.Column<string>(nullable: true),
+                    Firstname = table.Column<string>(nullable: false),
+                    Lastname = table.Column<string>(nullable: false),
                     DoctorId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -105,15 +138,15 @@ namespace DiasApp.Migrations
                 {
                     table.PrimaryKey("PK_DrugManufacturer", x => new { x.DrugId, x.ManufacturerId });
                     table.ForeignKey(
-                        name: "FK_DrugManufacturer_Drugs_DrugId",
+                        name: "FK_DrugManufacturer_Drug_DrugId",
                         column: x => x.DrugId,
-                        principalTable: "Drugs",
+                        principalTable: "Drug",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DrugManufacturer_Manufacturers_ManufacturerId",
+                        name: "FK_DrugManufacturer_Manufacturer_ManufacturerId",
                         column: x => x.ManufacturerId,
-                        principalTable: "Manufacturers",
+                        principalTable: "Manufacturer",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -141,16 +174,22 @@ namespace DiasApp.Migrations
                 name: "DrugManufacturer");
 
             migrationBuilder.DropTable(
+                name: "Order");
+
+            migrationBuilder.DropTable(
                 name: "Organization");
 
             migrationBuilder.DropTable(
                 name: "Patient");
 
             migrationBuilder.DropTable(
-                name: "Drugs");
+                name: "Prescription");
 
             migrationBuilder.DropTable(
-                name: "Manufacturers");
+                name: "Drug");
+
+            migrationBuilder.DropTable(
+                name: "Manufacturer");
 
             migrationBuilder.DropTable(
                 name: "Doctor");

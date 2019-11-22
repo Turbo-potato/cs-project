@@ -7,25 +7,28 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DiasApp.Data;
 using DiasApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DiasApp.Controllers
 {
-    public class ManufacturerController : Controller
+    [Authorize(Roles = "admin")]
+    public class ManufacturersController : Controller
     {
         private readonly PharmacyContext _context;
 
-        public ManufacturerController(PharmacyContext context)
+        public ManufacturersController(PharmacyContext context)
         {
             _context = context;
+           // _context.Database.EnsureCreated();
         }
 
-        // GET: Manufacturer
+        // GET: Manufacturers
         public async Task<IActionResult> Index()
         {
             return View(await _context.Manufacturer.ToListAsync());
         }
 
-        // GET: Manufacturer/Details/5
+        // GET: Manufacturers/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,13 +46,13 @@ namespace DiasApp.Controllers
             return View(manufacturer);
         }
 
-        // GET: Manufacturer/Create
+        // GET: Manufacturers/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Manufacturer/Create
+        // POST: Manufacturers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]

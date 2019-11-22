@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DiasApp.Data;
 using DiasApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DiasApp.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class DoctorsController : Controller
     {
         private readonly PharmacyContext _context;

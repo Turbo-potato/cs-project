@@ -1,4 +1,5 @@
 ﻿using DiasApp.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
 using System;
@@ -8,15 +9,16 @@ using System.Threading.Tasks;
 
 namespace DiasApp.Data
 {
-    public class PharmacyContext : DbContext
+    public class PharmacyContext : IdentityDbContext<User>//DbContext
     {
         public PharmacyContext(DbContextOptions<PharmacyContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             //MANY-TO-MANY
             modelBuilder.Entity<DrugManufacturer>().HasKey(dm => new { dm.DrugId, dm.ManufacturerId });
 

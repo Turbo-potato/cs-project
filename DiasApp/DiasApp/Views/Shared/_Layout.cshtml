@@ -33,11 +33,26 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Doctors" asp-action="">Doctors</a></li>
-                    <li><a asp-area="" asp-controller="Drugs" asp-action="">Drugs</a></li>
-                    <li><a asp-area="" asp-controller="Patients" asp-action="">Patients</a></li>
-                    <li><a asp-area="" asp-controller="Manufacturers" asp-action="">Manufacturers</a></li>
-                    <li><a asp-area="" asp-controller="Organizations" asp-action="">Organizations</a></li>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <li><a asp-area="" asp-controller="Doctors" asp-action="">Doctors</a></li>
+                        <li><a asp-area="" asp-controller="Drugs" asp-action="">Drugs</a></li>
+                        <li><a asp-area="" asp-controller="Patients" asp-action="">Patients</a></li>
+                        <li><a asp-area="" asp-controller="Manufacturers" asp-action="">Manufacturers</a></li>
+                        <li><a asp-area="" asp-controller="Organizations" asp-action="">Organizations</a></li>
+                        <li><a asp-area="" asp-controller="Orders" asp-action="">Orders</a></li>
+                        <li><a asp-area="" asp-controller="Roles" asp-action="">Roles</a></li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-area="" asp-controller="Account" asp-action="LogOut">@User.Identity.Name</a></li>
+                        <li><a asp-area="" asp-controller="Account" asp-action="LogOut">Log Out</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+                        <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
+                    }
                 </ul>
             </div>
         </div>
