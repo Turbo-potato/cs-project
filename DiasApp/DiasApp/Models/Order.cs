@@ -18,8 +18,8 @@ namespace DiasApp.Models
         }
         public Order(DateTime startTime, DateTime endTime)
         {
-            this.startTime = startTime;
-            this.endTime = endTime;
+            StartTime = startTime;
+            EndTime = endTime;
         }
 
         public int Id { set; get; }

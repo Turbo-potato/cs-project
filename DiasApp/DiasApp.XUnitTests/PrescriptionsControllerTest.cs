@@ -60,7 +60,7 @@ namespace DiasApp.XUnitTests
         {
             var prescriptions = new List<Prescription>
             {
-                new Prescription() { PatientName = "Dias", Instruction = "Not for a child", Frequency = "2 times a day" },
+                new Prescription() { PatientName = "Said", Instruction = "Not for a child", Frequency = "2 times a day" },
                 new Prescription() { PatientName = "Said", Instruction = "Not for a child", Frequency = "2 times a day" },
             };
 

@@ -25,8 +25,8 @@ namespace DiasApp.Models
         }
         public Drug(string name, string description)
         {
-            this.name = name;
-            this.description = description;
+            Name = name;
+            Description = description;
         }
 
         public int Id { set; get; }

@@ -57,8 +57,8 @@ namespace DiasApp.XUnitTests
         {
             var patients = new List<Patient>
             {
-                new Patient() { Firstname = "Dias", Lastname = " Isabekov"  },
-                new Patient() { Firstname = "Said", Lastname = " Isabekov"  },
+                new Patient() { Firstname = "Said", Lastname = "Isabekov"  },
+                new Patient() { Firstname = "Said", Lastname = "Isabekov"  },
             };
 
             var fakeRepositoryMock = new Mock<IPatientRepository>();
@@ -75,7 +75,7 @@ namespace DiasApp.XUnitTests
             },
             patient =>
             {
-                Assert.Equal("Dias", patient.Lastname);
+                Assert.Equal("Isabekov", patient.Lastname);
             });
         }
 
@@ -84,8 +84,8 @@ namespace DiasApp.XUnitTests
         {
             var movies = new List<Patient>
             {
-                new Patient() { Firstname = "Dias" },
-                new Patient() { Firstname = "Said" },
+                new Patient() { Firstname = "Dias", Lastname = "Said" },
+                new Patient() { Firstname = "Said", Lastname = "Said" },
             };
 
             var fakeRepositoryMock = new Mock<IPatientRepository>();
@@ -102,7 +102,7 @@ namespace DiasApp.XUnitTests
             },
             patient =>
             {
-                Assert.Equal("Dias", patient.Lastname);
+                Assert.Equal("Said", patient.Lastname);
             });
         }
 

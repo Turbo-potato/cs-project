@@ -22,9 +22,9 @@ namespace DiasApp.Models
         }
         public Prescription(string patientName, string frequency, string instruction)
         {
-            this.patientName = patientName;
-            this.frequency = frequency;
-            this.instruction = instruction;
+            PatientName = patientName;
+            Frequency = frequency;
+            Instruction = instruction;
         }
 
         public int Id { set; get; }

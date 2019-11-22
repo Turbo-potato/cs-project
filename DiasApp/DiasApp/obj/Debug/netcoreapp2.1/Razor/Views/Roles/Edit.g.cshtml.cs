@@ -73,7 +73,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(151, 99, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5db78048971a4419bd3e0ba3f8b55d8a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "222f8f109d394981ad2dfd2325c4ede2", async() => {
                 BeginContext(157, 86, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Edit</title>\r\n");
                 EndContext();
@@ -93,7 +93,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(252, 613, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f758cd1e1d8341008e24c26ccecb7e4c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a91d58ff3dbc45dd8c9d584c59d947d2", async() => {
                 BeginContext(258, 45, true);
                 WriteLiteral("\r\n\r\n    <h2>Изменение ролей для пользователя ");
                 EndContext();
@@ -108,7 +108,7 @@ using Microsoft.AspNetCore.Identity;
                 WriteLiteral("</h2>\r\n\r\n    ");
                 EndContext();
                 BeginContext(332, 522, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e319a6abc494b7ca765131e06541cac", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a5226489f3cd4ae2b5fb8e4529b9f96a", async() => {
                     BeginContext(370, 44, true);
                     WriteLiteral("\r\n        <input type=\"hidden\" name=\"userId\"");
                     EndContext();

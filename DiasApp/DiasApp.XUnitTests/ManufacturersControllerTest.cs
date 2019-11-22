@@ -58,7 +58,7 @@ namespace DiasApp.XUnitTests
         {
             var manufacturers = new List<Manufacturer>
             {
-                new Manufacturer() { Name = "Dias", Address = "USA LA" },
+                new Manufacturer() { Name = "Said", Address = "USA LA" },
                 new Manufacturer() { Name = "Said", Address = "USA LA" },
             };
 
@@ -76,7 +76,7 @@ namespace DiasApp.XUnitTests
             },
             manufacturer =>
             {
-                Assert.Equal("Dias", manufacturer.Name);
+                Assert.Equal("USA LA", manufacturer.Address);
             });
         }
 

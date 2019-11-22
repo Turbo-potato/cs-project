@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "f0e71257e788fdd35fcc0968d15e1d22642571ed"
+    "signature": "08fe5d5fcbf9316754ee89aed8380b1265b8ead4"
   },
   "compilationOptions": {},
   "targets": {
@@ -273,30 +273,30 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Identity/2.1.1": {
+      "Microsoft.AspNetCore.Identity/2.1.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Cookies": "2.1.1",
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.1.1",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
-          "Microsoft.Extensions.Identity.Core": "2.1.1"
+          "Microsoft.Extensions.Identity.Core": "2.1.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Identity.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.18180"
           }
         }
       },
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.1.1": {
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.1.2": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity": "2.1.1",
+          "Microsoft.AspNetCore.Identity": "2.1.2",
           "Microsoft.EntityFrameworkCore.Relational": "2.1.1",
-          "Microsoft.Extensions.Identity.Stores": "2.1.1"
+          "Microsoft.Extensions.Identity.Stores": "2.1.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.18180"
           }
         }
       },
@@ -750,7 +750,7 @@
           }
         }
       },
-      "Microsoft.Extensions.Identity.Core/2.1.1": {
+      "Microsoft.Extensions.Identity.Core/2.1.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.1.1",
           "Microsoft.Extensions.Logging": "2.1.1",
@@ -759,21 +759,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.18180"
           }
         }
       },
-      "Microsoft.Extensions.Identity.Stores/2.1.1": {
+      "Microsoft.Extensions.Identity.Stores/2.1.2": {
         "dependencies": {
-          "Microsoft.Extensions.Identity.Core": "2.1.1",
+          "Microsoft.Extensions.Identity.Core": "2.1.2",
           "Microsoft.Extensions.Logging": "2.1.1",
           "System.ComponentModel.Annotations": "4.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.18180"
           }
         }
       },
@@ -2713,8 +2713,8 @@
       },
       "DiasApp/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity": "2.1.1",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1",
+          "Microsoft.AspNetCore.Identity": "2.1.2",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.2",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.1.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.10",
@@ -2873,19 +2873,19 @@
       "path": "microsoft.aspnetcore.http.features/2.1.1",
       "hashPath": "microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Identity/2.1.1": {
+    "Microsoft.AspNetCore.Identity/2.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pcVCJSyg5OkKJUyhsFZa3iovu2dqVVB8y9gn1DeDA+7atQhksjB+UMpM4m+EY9awXHZGwmAn6a5xws8rWFEowA==",
-      "path": "microsoft.aspnetcore.identity/2.1.1",
-      "hashPath": "microsoft.aspnetcore.identity.2.1.1.nupkg.sha512"
+      "sha512": "sha512-Kz/jFNZLvNpcA+NBDWq8Lgxx3OhIeqZqpyqO4wZsfd+4tfWSnE8OLJAsSwulqLWYWP7RWgeD8bAXOwg8T/3AHA==",
+      "path": "microsoft.aspnetcore.identity/2.1.2",
+      "hashPath": "microsoft.aspnetcore.identity.2.1.2.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.1.1": {
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0KM6pAyIsBBgPlqdb3Ah0W/DmF+uxtIgHyY46R2ys2Tmusvgu8eUDIPCJO8P9wsO/o3mpllWlgc5frbJhGnLUQ==",
-      "path": "microsoft.aspnetcore.identity.entityframeworkcore/2.1.1",
-      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.2.1.1.nupkg.sha512"
+      "sha512": "sha512-Abg2B6lzRWNJeU3QAS1YAKambKuTDVSkXint9kb8tL3c4MGaOjcqfTSef0FnlYyQHQ/gIv5o8LrzFy30jYO+5w==",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/2.1.2",
+      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.2.1.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/2.1.1": {
       "type": "package",
@@ -3139,19 +3139,19 @@
       "path": "microsoft.extensions.hosting.abstractions/2.1.1",
       "hashPath": "microsoft.extensions.hosting.abstractions.2.1.1.nupkg.sha512"
     },
-    "Microsoft.Extensions.Identity.Core/2.1.1": {
+    "Microsoft.Extensions.Identity.Core/2.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4dv6des0aRMNLgo+zbGy2Bp6Amy6YbVsSRB9VvSAqdTfhXAcLQ95AQdsLcqDhBI3H4s0sJxCdwmLDKQMbi0Vag==",
-      "path": "microsoft.extensions.identity.core/2.1.1",
-      "hashPath": "microsoft.extensions.identity.core.2.1.1.nupkg.sha512"
+      "sha512": "sha512-NZvMVbM1WSYDPDS4HdDbeXyJhNzmf1cfyNikAn+w6GrwqML7cQa8RPf7l567TrN1v2AQVvimtQslEK1u8kMW1w==",
+      "path": "microsoft.extensions.identity.core/2.1.2",
+      "hashPath": "microsoft.extensions.identity.core.2.1.2.nupkg.sha512"
     },
-    "Microsoft.Extensions.Identity.Stores/2.1.1": {
+    "Microsoft.Extensions.Identity.Stores/2.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ihjvNMbiZI9cs1qbcVFiICA2RrwM8mlSfypDIIPu7taDBa9vOLSmCHqOg5QmlMtVi5jwkMGfNKznEIYPbaHNmQ==",
-      "path": "microsoft.extensions.identity.stores/2.1.1",
-      "hashPath": "microsoft.extensions.identity.stores.2.1.1.nupkg.sha512"
+      "sha512": "sha512-0UmLHGMDvdYkRP4IM/0X8SuZIVIxV0GclQZetjaq+v5ELoGMMfJEIb7/4Ops8ZbeP15tZWzZhlP8hunhzZXzMQ==",
+      "path": "microsoft.extensions.identity.stores/2.1.2",
+      "hashPath": "microsoft.extensions.identity.stores.2.1.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Localization/2.1.1": {
       "type": "package",

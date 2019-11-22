@@ -18,9 +18,9 @@ namespace DiasApp.XUnitTests
         [Fact]
         public async Task ConstructorTest()
         {
-            var order = new Order(DateTime.MinValue, DateTime.Now);
+            var order = new Order(DateTime.MinValue, new DateTime(2019, 11, 16));
             Assert.Equal(DateTime.MinValue, order.StartTime);
-            Assert.Equal(DateTime.Now, order.EndTime);
+            Assert.Equal(new DateTime(2019, 11, 16), order.EndTime);
         }
 
         [Fact]
@@ -59,8 +59,8 @@ namespace DiasApp.XUnitTests
         {
             var orders = new List<Order>
             {
-                new Order() { StartTime = DateTime.Now },
-                new Order() { StartTime = DateTime.Now },
+                new Order() { StartTime = new DateTime(2019, 11, 16) },
+                new Order() { StartTime = new DateTime(2019, 11, 16) },
             };
 
             var fakeRepositoryMock = new Mock<IOrderRepository>();
@@ -73,11 +73,11 @@ namespace DiasApp.XUnitTests
 
             Assert.Collection(resultOrders, order =>
             {
-                Assert.Equal("16.11.2019", order.StartTime.ToString());
+                Assert.Equal("16.11.19", order.StartTime.ToString("dd.MM.yy"));
             },
             order =>
             {
-                Assert.Equal("22.11.2019", order.StartTime.ToString());
+                Assert.Equal("16.11.19", order.StartTime.ToString("dd.MM.yy"));
             });
         }
 
@@ -86,8 +86,8 @@ namespace DiasApp.XUnitTests
         {
             var movies = new List<Order>
             {
-                new Order() { StartTime = DateTime.Now },
-                new Order() { StartTime = DateTime.Now },
+                new Order() { StartTime = new DateTime(2019, 11, 16) },
+                new Order() { StartTime = new DateTime(2019, 11, 15) },
             };
 
             var fakeRepositoryMock = new Mock<IOrderRepository>();
@@ -100,11 +100,11 @@ namespace DiasApp.XUnitTests
 
             Assert.Collection(resultOrders, order =>
             {
-                Assert.Equal("16.11.2019", order.StartTime.ToString());
+                Assert.Equal("16.11.2019", order.StartTime.ToString("dd.MM.yyyy"));
             },
             order =>
             {
-                Assert.Equal("15.11.2019", order.StartTime.ToString());
+                Assert.Equal("15.11.2019", order.StartTime.ToString("dd.MM.yyyy"));
             });
         }
 

@@ -58,8 +58,8 @@ namespace DiasApp.XUnitTests
         {
             var organizations = new List<Organization>
             {
-                new Organization() { Name = "Dias", Address = " IITU Zhandosov st." },
-                new Organization() { Name = "Said", Address = " IITU Zhandosov st." },
+                new Organization() { Name = "Said", Address = "IITU Zhandosov st." },
+                new Organization() { Name = "Said", Address = "IITU Zhandosov st." },
             };
 
             var fakeRepositoryMock = new Mock<IOrganizationRepository>();
@@ -76,7 +76,7 @@ namespace DiasApp.XUnitTests
             },
             organization =>
             {
-                Assert.Equal("Dias", organization.Name);
+                Assert.Equal("IITU Zhandosov st.", organization.Address);
             });
         }
 

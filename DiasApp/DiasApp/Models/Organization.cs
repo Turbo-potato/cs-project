@@ -19,8 +19,8 @@ namespace DiasApp.Models
         }
         public Organization(string name, string address)
         {
-            this.name = name;
-            this.address = address;
+            Name = name;
+            Address = address;
         }
 
         public int Id { set; get; }

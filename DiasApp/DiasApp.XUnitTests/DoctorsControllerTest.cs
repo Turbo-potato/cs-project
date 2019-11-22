@@ -59,8 +59,8 @@ namespace DiasApp.XUnitTests
         {
             var doctors = new List<Doctor>
             {
-                new Doctor() { Firstname = "Dias", Lastname = " Isabekov", Certificate = "IITU doctor" },
-                new Doctor() { Firstname = "Said", Lastname = " Isabekov", Certificate = "IITU doctor" },
+                new Doctor() { Firstname = "Dias", Lastname = "Isabekov", Certificate = "IITU doctor" },
+                new Doctor() { Firstname = "Said", Lastname = "Isabekov", Certificate = "IITU doctor" },
             };
 
             var fakeRepositoryMock = new Mock<IDoctorRepository>();
@@ -73,25 +73,25 @@ namespace DiasApp.XUnitTests
 
             Assert.Collection(resultDoctors, doctor =>
             {
-                Assert.Equal("Said", doctor.Firstname);
+                Assert.Equal("Dias", doctor.Firstname);
             },
             doctor =>
             {
-                Assert.Equal("Dias", doctor.Lastname);
+                Assert.Equal("Isabekov", doctor.Lastname);
             });
         }
 
         [Fact]
         public async Task SearchTest()
         {
-            var movies = new List<Doctor>
+            var doctors = new List<Doctor>
             {
                 new Doctor() { Firstname = "Dias" },
-                new Doctor() { Firstname = "Said" },
+                new Doctor() { Firstname = "Said", Lastname = "Doctorov" },
             };
 
             var fakeRepositoryMock = new Mock<IDoctorRepository>();
-            fakeRepositoryMock.Setup(x => x.GetDoctorWithPredicate(It.IsAny<Expression<Func<Doctor, bool>>>())).ReturnsAsync(movies);
+            fakeRepositoryMock.Setup(x => x.GetDoctorWithPredicate(It.IsAny<Expression<Func<Doctor, bool>>>())).ReturnsAsync(doctors);
 
 
             var doctorService = new DoctorService(fakeRepositoryMock.Object);
@@ -104,7 +104,7 @@ namespace DiasApp.XUnitTests
             },
             doctor =>
             {
-                Assert.Equal("Dias", doctor.Lastname);
+                Assert.Equal("Doctorov", doctor.Lastname);
             });
         }
 

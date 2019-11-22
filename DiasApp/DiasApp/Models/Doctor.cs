@@ -21,8 +21,8 @@ namespace DiasApp.Models
         }
         public Doctor(string firstname, string lastname)
         {
-            this.firstname = firstname;
-            this.lastname = lastname;
+            Firstname = firstname;
+            Lastname = lastname;
         }
         public int Id { set; get; }
 
