@@ -66,7 +66,7 @@ using DiasApp.Models;
             WriteLiteral("\r\n<h2>Index</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(116, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9260b714b8224a10b793cec6f09e81ca", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65a2ca07663b406b9b44cfd9981238f6", async() => {
                 BeginContext(139, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -156,7 +156,7 @@ using DiasApp.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(954, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b82ba868ace427989bc5f53fe7f6c39", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e7d1eb5b45f4a5b9850ab4b84ac2642", async() => {
                 BeginContext(999, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -191,7 +191,7 @@ using DiasApp.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1027, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a3ae97d05a74cfdaff857e09030f6bf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "47f8f94a7341486c948fbaaec64f316e", async() => {
                 BeginContext(1075, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -226,7 +226,7 @@ using DiasApp.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1106, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58d4097d18304b43b270441aa049b790", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19b08607d07a45318252eef079c1847c", async() => {
                 BeginContext(1153, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

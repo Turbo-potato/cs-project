@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Profile</title>
+</head>
+<body>
+
+    @if (TempData["UserState"] != null && TempData["AuthInfo"] != null)
+    {
+        <h3>You are @TempData["UserState"]! @TempData["AuthInfo"]</h3>
+    }
+    else
+    {
+        <h3>You are not authorized!</h3>
+    }
+    <hr />
+    <h3>Your status: @ViewBag.Name!</h3>
+    <h3>Time last login: @ViewBag.Time</h3>
+    <h3>Username: @ViewBag.DefaultUser.UserName</h3>
+    <h3>Email: @ViewBag.DefaultUser.Email</h3>
+</body>
+</html>

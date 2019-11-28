@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "d6cf6b6654aa9fd337c627e8b6efd7f5734b0fb0"
+    "signature": "d5be80e254aad5049f18a7b0d8c74b1b01d248e2"
   },
   "compilationOptions": {
     "defines": [
@@ -29,10 +29,12 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.2",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
+          "Microsoft.AspNetCore.Session": "2.1.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.10",
           "Moq": "4.13.1",
+          "System.Runtime.Serialization.Json": "4.3.0",
           "xunit.extensibility.core": "2.4.1"
         },
         "runtime": {
@@ -830,6 +832,13 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Runtime.Serialization.Json/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Private.DataContractSerialization": "4.3.0",
+          "System.Runtime": "4.3.0"
         }
       },
       "xunit.abstractions/2.0.3": {
@@ -4074,6 +4083,13 @@
       "sha512": "sha512-Ske1/lVdO864geTWyjXWed/0Oeb9rR++0PGae4+xzDP1cD+gKBauC9YBj8BGEyu1bfDSkhZA5P3ogHS1ChViJg==",
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Serialization.Json/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CpVfOH0M/uZ5PH+M9+Gu56K0j9lJw3M+PKRegTkcrY/stOIvRUeonggxNrfBYLA5WOHL2j15KNJuTuld3x4o9w==",
+      "path": "system.runtime.serialization.json/4.3.0",
+      "hashPath": "system.runtime.serialization.json.4.3.0.nupkg.sha512"
     },
     "xunit.abstractions/2.0.3": {
       "type": "package",

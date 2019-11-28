@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[2.1.2, )"
             },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[2.1.1, )"
@@ -80,6 +84,10 @@
             "Moq": {
               "target": "Package",
               "version": "[4.13.1, )"
+            },
+            "System.Runtime.Serialization.Json": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "xunit.extensibility.core": {
               "target": "Package",

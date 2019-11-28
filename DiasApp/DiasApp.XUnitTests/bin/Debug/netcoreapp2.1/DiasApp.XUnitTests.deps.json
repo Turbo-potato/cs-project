@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "08fe5d5fcbf9316754ee89aed8380b1265b8ead4"
+    "signature": "68e77f4c0236a2c88d4de740796330eab900d19b"
   },
   "compilationOptions": {},
   "targets": {
@@ -431,6 +431,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Session/2.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "2.1.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Caching.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Session.dll": {
             "assemblyVersion": "2.1.1.0",
             "fileVersion": "2.1.1.18157"
           }
@@ -895,8 +910,8 @@
           "System.Reflection.TypeExtensions": "4.3.0",
           "System.Runtime.InteropServices.RuntimeInformation": "4.0.0",
           "System.Runtime.Loader": "4.0.0",
-          "System.Runtime.Serialization.Json": "4.0.2",
-          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Runtime.Serialization.Json": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
           "System.Threading.Thread": "4.3.0",
           "System.Xml.XPath.XmlDocument": "4.0.1"
         },
@@ -2038,7 +2053,7 @@
           "System.Threading": "4.3.0"
         }
       },
-      "System.Private.DataContractSerialization/4.1.1": {
+      "System.Private.DataContractSerialization/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Collections.Concurrent": "4.3.0",
@@ -2055,15 +2070,16 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XDocument": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0",
-          "System.Xml.XmlSerializer": "4.0.11"
+          "System.Xml.XmlSerializer": "4.3.0"
         }
       },
       "System.Reflection/4.3.0": {
@@ -2203,14 +2219,14 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
-      "System.Runtime.Serialization.Json/4.0.2": {
+      "System.Runtime.Serialization.Json/4.3.0": {
         "dependencies": {
           "System.IO": "4.3.0",
-          "System.Private.DataContractSerialization": "4.1.1",
+          "System.Private.DataContractSerialization": "4.3.0",
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Runtime.Serialization.Primitives/4.1.1": {
+      "System.Runtime.Serialization.Primitives/4.3.0": {
         "dependencies": {
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -2587,7 +2603,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "System.Xml.XmlSerializer/4.0.11": {
+      "System.Xml.XmlSerializer/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Globalization": "4.3.0",
@@ -2716,9 +2732,11 @@
           "Microsoft.AspNetCore.Identity": "2.1.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.2",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.1.1",
+          "Microsoft.AspNetCore.Session": "2.1.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.10",
           "Moq": "4.13.1",
+          "System.Runtime.Serialization.Json": "4.3.0",
           "xunit.extensibility.core": "2.4.1"
         },
         "runtime": {
@@ -2956,6 +2974,13 @@
       "sha512": "sha512-Aa88Bi0/HI8dPReC0XqByPiVGYDRfj6Xh2eVsNCisnlgFHonDdW9CQsNPhVSK+uWQl3kDMFxFpeJ1ktz/wUHsQ==",
       "path": "microsoft.aspnetcore.routing.abstractions/2.1.1",
       "hashPath": "microsoft.aspnetcore.routing.abstractions.2.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Session/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hQ4PHIHw1RmqoqjZKRfT4eL6msUd7K+GwcLUGtd1WZT7mOzqmt2oXkzL0Q+qudgXsNdWmH+zpe0zzqKM8Hz45w==",
+      "path": "microsoft.aspnetcore.session/2.1.1",
+      "hashPath": "microsoft.aspnetcore.session.2.1.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.WebUtilities/2.1.1": {
       "type": "package",
@@ -3811,12 +3836,12 @@
       "path": "system.objectmodel/4.3.0",
       "hashPath": "system.objectmodel.4.3.0.nupkg.sha512"
     },
-    "System.Private.DataContractSerialization/4.1.1": {
+    "System.Private.DataContractSerialization/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lcqFBUaCZxPiUkA4dlSOoPZGtZsAuuElH2XHgLwGLxd7ZozWetV5yiz0qGAV2AUYOqw97MtZBjbLMN16Xz4vXA==",
-      "path": "system.private.datacontractserialization/4.1.1",
-      "hashPath": "system.private.datacontractserialization.4.1.1.nupkg.sha512"
+      "sha512": "sha512-yDaJ2x3mMmjdZEDB4IbezSnCsnjQ4BxinKhRAaP6kEgL6Bb6jANWphs5SzyD8imqeC/3FxgsuXT6ykkiH1uUmA==",
+      "path": "system.private.datacontractserialization/4.3.0",
+      "hashPath": "system.private.datacontractserialization.4.3.0.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",
@@ -3937,19 +3962,19 @@
       "path": "system.runtime.numerics/4.3.0",
       "hashPath": "system.runtime.numerics.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.Serialization.Json/4.0.2": {
+    "System.Runtime.Serialization.Json/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+7DIJhnKYgCzUgcLbVTtRQb2l1M0FP549XFlFkQM5lmNiUBl44AfNbx4bz61xA8PzLtlYwfmif4JJJW7MPPnjg==",
-      "path": "system.runtime.serialization.json/4.0.2",
-      "hashPath": "system.runtime.serialization.json.4.0.2.nupkg.sha512"
+      "sha512": "sha512-CpVfOH0M/uZ5PH+M9+Gu56K0j9lJw3M+PKRegTkcrY/stOIvRUeonggxNrfBYLA5WOHL2j15KNJuTuld3x4o9w==",
+      "path": "system.runtime.serialization.json/4.3.0",
+      "hashPath": "system.runtime.serialization.json.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.Serialization.Primitives/4.1.1": {
+    "System.Runtime.Serialization.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg==",
-      "path": "system.runtime.serialization.primitives/4.1.1",
-      "hashPath": "system.runtime.serialization.primitives.4.1.1.nupkg.sha512"
+      "sha512": "sha512-Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "path": "system.runtime.serialization.primitives/4.3.0",
+      "hashPath": "system.runtime.serialization.primitives.4.3.0.nupkg.sha512"
     },
     "System.Security.AccessControl/4.5.0": {
       "type": "package",
@@ -4140,12 +4165,12 @@
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
-    "System.Xml.XmlSerializer/4.0.11": {
+    "System.Xml.XmlSerializer/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FrazwwqfIXTfq23mfv4zH+BjqkSFNaNFBtjzu3I9NRmG8EELYyrv/fJnttCIwRMFRR/YKXF1hmsMmMEnl55HGw==",
-      "path": "system.xml.xmlserializer/4.0.11",
-      "hashPath": "system.xml.xmlserializer.4.0.11.nupkg.sha512"
+      "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
+      "path": "system.xml.xmlserializer/4.3.0",
+      "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "System.Xml.XPath/4.3.0": {
       "type": "package",

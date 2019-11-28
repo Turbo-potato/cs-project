@@ -1,6 +1,6 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "_Layout";
     @model DiasApp.ViewModels.LoginViewModel
 }
 
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <h2>Вход в приложение</h2>
+    <h2>Login to app</h2>
     <form method="post" asp-controller="Account" asp-action="Login"
           asp-route-returnUrl="@Model.ReturnUrl">
         <div asp-validation-summary="ModelOnly"></div>
@@ -32,7 +32,7 @@
             <input asp-for="RememberMe" />
         </div>
         <div>
-            <input type="submit" value="Войти" />
+            <input type="submit" value="Login" />
         </div>
     </form>
 

@@ -17,6 +17,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+
 namespace DiasApp
 {
     public class Startup
@@ -31,7 +32,20 @@ namespace DiasApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
+            //session configs
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromMinutes(60);
+                options.Cookie.HttpOnly = true;
+                // Make the session cookie essential
+                options.Cookie.IsEssential = true;
+                //options.CheckConsentNeeded = context => false;
+            });
+
+                services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
@@ -120,6 +134,20 @@ namespace DiasApp
 
             app.UseAuthentication();
             //app.UseAuthorization();
+
+            app.UseSession();
+            //app.UseHttpContextItemsMiddleware();
+
+            /*app.Run(async (context) =>
+            {
+                 if (context.Session.Keys.Contains("name")) { }
+                    // await context.Response.WriteAsync($"Hello {context.Session.GetString("name")}!");
+                 else
+                 {
+                     context.Session.SetString("name", "Anonymous");
+                     //await context.Response.WriteAsync("Hello Anonymous!");
+                 }
+             });*/
 
             app.UseMvc(routes =>
             {

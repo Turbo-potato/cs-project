@@ -452,6 +452,22 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Session/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "2.1.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Caching.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Session.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Session.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.WebUtilities/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -2677,33 +2693,34 @@
           "lib/netstandard1.3/System.ObjectModel.dll": {}
         }
       },
-      "System.Private.DataContractSerialization/4.1.1": {
+      "System.Private.DataContractSerialization/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Collections.Concurrent": "4.0.12",
-          "System.Diagnostics.Debug": "4.0.11",
-          "System.Globalization": "4.0.11",
-          "System.IO": "4.1.0",
-          "System.Linq": "4.1.0",
-          "System.Reflection": "4.1.0",
-          "System.Reflection.Emit.ILGeneration": "4.0.1",
-          "System.Reflection.Emit.Lightweight": "4.0.1",
-          "System.Reflection.Extensions": "4.0.1",
-          "System.Reflection.Primitives": "4.0.1",
-          "System.Reflection.TypeExtensions": "4.1.0",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0",
-          "System.Runtime.Extensions": "4.1.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1",
-          "System.Text.Encoding": "4.0.11",
-          "System.Text.Encoding.Extensions": "4.0.11",
-          "System.Text.RegularExpressions": "4.1.0",
-          "System.Threading": "4.0.11",
-          "System.Threading.Tasks": "4.0.11",
-          "System.Xml.ReaderWriter": "4.0.11",
-          "System.Xml.XmlDocument": "4.0.1",
-          "System.Xml.XmlSerializer": "4.0.11"
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0",
+          "System.Xml.XmlSerializer": "4.3.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
@@ -2955,12 +2972,12 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Runtime.Serialization.Json/4.0.2": {
+      "System.Runtime.Serialization.Json/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.IO": "4.1.0",
-          "System.Private.DataContractSerialization": "4.1.1",
-          "System.Runtime": "4.1.0"
+          "System.IO": "4.3.0",
+          "System.Private.DataContractSerialization": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Runtime.Serialization.Json.dll": {}
@@ -2969,11 +2986,11 @@
           "lib/netstandard1.3/System.Runtime.Serialization.Json.dll": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.1.1": {
+      "System.Runtime.Serialization.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0"
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
@@ -3504,26 +3521,26 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "System.Xml.XmlSerializer/4.0.11": {
+      "System.Xml.XmlSerializer/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Globalization": "4.0.11",
-          "System.IO": "4.1.0",
-          "System.Linq": "4.1.0",
-          "System.Reflection": "4.1.0",
-          "System.Reflection.Emit": "4.0.1",
-          "System.Reflection.Emit.ILGeneration": "4.0.1",
-          "System.Reflection.Extensions": "4.0.1",
-          "System.Reflection.Primitives": "4.0.1",
-          "System.Reflection.TypeExtensions": "4.1.0",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0",
-          "System.Runtime.Extensions": "4.1.0",
-          "System.Text.RegularExpressions": "4.1.0",
-          "System.Threading": "4.0.11",
-          "System.Xml.ReaderWriter": "4.0.11",
-          "System.Xml.XmlDocument": "4.0.1"
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.3/_._": {}
@@ -3682,10 +3699,12 @@
           "Microsoft.AspNetCore.Identity": "2.1.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.2",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.1.1",
+          "Microsoft.AspNetCore.Session": "2.1.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.10",
           "Moq": "4.13.1",
+          "System.Runtime.Serialization.Json": "4.3.0",
           "xunit.extensibility.core": "2.4.1"
         },
         "compile": {
@@ -4128,6 +4147,19 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.xml",
         "microsoft.aspnetcore.routing.abstractions.2.1.1.nupkg.sha512",
         "microsoft.aspnetcore.routing.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Session/2.1.1": {
+      "sha512": "hQ4PHIHw1RmqoqjZKRfT4eL6msUd7K+GwcLUGtd1WZT7mOzqmt2oXkzL0Q+qudgXsNdWmH+zpe0zzqKM8Hz45w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.session/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Session.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Session.xml",
+        "microsoft.aspnetcore.session.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.session.nuspec"
       ]
     },
     "Microsoft.AspNetCore.WebUtilities/2.1.1": {
@@ -8383,10 +8415,10 @@
         "system.objectmodel.nuspec"
       ]
     },
-    "System.Private.DataContractSerialization/4.1.1": {
-      "sha512": "lcqFBUaCZxPiUkA4dlSOoPZGtZsAuuElH2XHgLwGLxd7ZozWetV5yiz0qGAV2AUYOqw97MtZBjbLMN16Xz4vXA==",
+    "System.Private.DataContractSerialization/4.3.0": {
+      "sha512": "yDaJ2x3mMmjdZEDB4IbezSnCsnjQ4BxinKhRAaP6kEgL6Bb6jANWphs5SzyD8imqeC/3FxgsuXT6ykkiH1uUmA==",
       "type": "package",
-      "path": "system.private.datacontractserialization/4.1.1",
+      "path": "system.private.datacontractserialization/4.3.0",
       "files": [
         ".nupkg.metadata",
         "ThirdPartyNotices.txt",
@@ -8394,7 +8426,7 @@
         "lib/netstandard1.3/System.Private.DataContractSerialization.dll",
         "ref/netstandard/_._",
         "runtimes/aot/lib/netcore50/System.Private.DataContractSerialization.dll",
-        "system.private.datacontractserialization.4.1.1.nupkg.sha512",
+        "system.private.datacontractserialization.4.3.0.nupkg.sha512",
         "system.private.datacontractserialization.nuspec"
       ]
     },
@@ -9281,12 +9313,13 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Runtime.Serialization.Json/4.0.2": {
-      "sha512": "+7DIJhnKYgCzUgcLbVTtRQb2l1M0FP549XFlFkQM5lmNiUBl44AfNbx4bz61xA8PzLtlYwfmif4JJJW7MPPnjg==",
+    "System.Runtime.Serialization.Json/4.3.0": {
+      "sha512": "CpVfOH0M/uZ5PH+M9+Gu56K0j9lJw3M+PKRegTkcrY/stOIvRUeonggxNrfBYLA5WOHL2j15KNJuTuld3x4o9w==",
       "type": "package",
-      "path": "system.runtime.serialization.json/4.0.2",
+      "path": "system.runtime.serialization.json/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9335,14 +9368,14 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.runtime.serialization.json.4.0.2.nupkg.sha512",
+        "system.runtime.serialization.json.4.3.0.nupkg.sha512",
         "system.runtime.serialization.json.nuspec"
       ]
     },
-    "System.Runtime.Serialization.Primitives/4.1.1": {
-      "sha512": "HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg==",
+    "System.Runtime.Serialization.Primitives/4.3.0": {
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
-      "path": "system.runtime.serialization.primitives/4.1.1",
+      "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
         "ThirdPartyNotices.txt",
@@ -9407,7 +9440,7 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "system.runtime.serialization.primitives.4.1.1.nupkg.sha512",
+        "system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
@@ -10622,10 +10655,10 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "System.Xml.XmlSerializer/4.0.11": {
-      "sha512": "FrazwwqfIXTfq23mfv4zH+BjqkSFNaNFBtjzu3I9NRmG8EELYyrv/fJnttCIwRMFRR/YKXF1hmsMmMEnl55HGw==",
+    "System.Xml.XmlSerializer/4.3.0": {
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
-      "path": "system.xml.xmlserializer/4.0.11",
+      "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
         "ThirdPartyNotices.txt",
@@ -10688,7 +10721,7 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll",
-        "system.xml.xmlserializer.4.0.11.nupkg.sha512",
+        "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
     },

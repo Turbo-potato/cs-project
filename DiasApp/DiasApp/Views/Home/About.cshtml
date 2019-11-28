@@ -4,4 +4,23 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
+@if (TempData["UserState"] != null && TempData["AuthInfo"] != null)
+{
+    <h3>You are @TempData["UserState"]! @TempData["AuthInfo"]</h3>
+}
+else
+{
+    if (User.Identity.IsAuthenticated)
+    {
+        <h3>You are authorized!</h3>
+    }
+    else
+    {
+        <h3>You are not authorized!</h3>
+    }
+}
+<hr />
+<h3>Your status: @ViewBag.Name!</h3>
+<h3>Last entry time: @ViewBag.Time</h3>
+
 <p>Use this area to provide additional information.</p>
