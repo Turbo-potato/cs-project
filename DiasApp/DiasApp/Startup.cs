@@ -16,7 +16,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using DiasApp.Hubs;
 
 namespace DiasApp
 {
@@ -79,6 +79,8 @@ namespace DiasApp
 
             services.AddScoped<PatientService>();
             services.AddScoped<IPatientRepository, PatientRepository>();
+
+            services.AddSignalR();
 
             //SEC SETTINGS
             services.Configure<IdentityOptions>(options =>
@@ -155,7 +157,12 @@ namespace DiasApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-         
+            //UseSignalR 
+            app.UseSignalR(endpoints =>
+            {
+                endpoints.MapHub<ChatHub>("/chatHub");
+            });
+
         }
     }
 }

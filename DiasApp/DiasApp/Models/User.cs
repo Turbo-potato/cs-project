@@ -9,5 +9,6 @@ namespace DiasApp.Models
     public class User : IdentityUser
     {
         public int Year { get; set; }
+        public string Username { get; set; }
     }
 }

@@ -47,6 +47,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li><a asp-area="" asp-controller="Account" asp-action="Profile">@User.Identity.Name</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Chat">Public Chat</a></li>
                         <li><a asp-area="" asp-controller="Account" asp-action="LogOut">Log Out</a></li>
                     }
                     else

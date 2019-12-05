@@ -46,6 +46,8 @@ namespace DiasApp.Data
 
         public DbSet<Manufacturer> Manufacturer { get; set; }
         public DbSet<Drug> Drug { get; set; }
+
+        public DbSet<User> User { get; set; }
         public DbSet<DiasApp.Models.Doctor> Doctor { get; set; }
         public DbSet<DiasApp.Models.Organization> Organization { get; set; }
         public DbSet<DiasApp.Models.Patient> Patient { get; set; }

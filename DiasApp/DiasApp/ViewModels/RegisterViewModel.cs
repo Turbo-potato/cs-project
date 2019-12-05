@@ -14,6 +14,11 @@ namespace DiasApp.ViewModels
         public string Email { get; set; }
 
         [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
+
+        [Required]
         [Display(Name = "Birth year")]
         public int Year { get; set; }
 

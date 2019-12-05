@@ -63,7 +63,7 @@ using DiasApp.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(63, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f5ab48eaf64f471dade04f2fdc7ff2a8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7745d63ad30d4351a179edb2f12f5b7f", async() => {
                 BeginContext(69, 89, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Profile</title>\r\n");
                 EndContext();
@@ -83,7 +83,7 @@ using DiasApp.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(167, 443, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd6d582712d7425d81f6079649986963", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4bb1944a916b40c688ad7079eaaeeee6", async() => {
                 BeginContext(173, 4, true);
                 WriteLiteral("\r\n\r\n");
                 EndContext();

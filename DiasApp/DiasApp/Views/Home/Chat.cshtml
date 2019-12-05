@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Chat";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Chat</title>
+</head>
+<body>
+    <h2>@ViewData["Title"]</h2>
+    <h3>@ViewData["Message"]</h3>
+
+    @if (TempData["UserState"] != null && TempData["AuthInfo"] != null)
+    {
+        <h3>You are @TempData["UserState"]! @TempData["AuthInfo"]</h3>
+    }
+    else
+    {
+        if (User.Identity.IsAuthenticated)
+        {
+            <h3>You are authorized!</h3>
+        }
+        else
+        {
+            <h3>You are not authorized!</h3>
+        }
+    }
+    <hr />
+
+    <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-2" hidden>User</div>
+            <div class="col-4"><input type="text" id="userInput" value="@ViewBag.DefaultUser.Username" hidden/></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Message</div>
+            <div class="col-4"><input type="text" id="messageInput" /></div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-6">
+                <input type="button" id="sendButton" value="Send Message" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+
+    <h3>Your status: @ViewBag.Name!</h3>
+    <h3>Last entry time: @ViewBag.Time</h3>
+
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>
+</html>

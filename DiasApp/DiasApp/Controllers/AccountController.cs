@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DiasApp.Models;
+using DiasApp.Services;
 using DiasApp.Session;
 using DiasApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -16,6 +17,7 @@ namespace DiasApp.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly UserService _userService;
 
         const string SessionKeyName = "_Name";
         const string SessionKeyAge = "_Age";
@@ -40,7 +42,7 @@ namespace DiasApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email, Year = model.Year };
+                User user = new User { Email = model.Email, UserName = model.Email, Year = model.Year, Username = model.Username };
                 // add user
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -102,6 +104,8 @@ namespace DiasApp.Controllers
                     User user = new User();
                     user.Email = model.Email;
                     user.UserName = model.Email;
+                    // var dbUser = await _userService.SearchByEmail(model.Email);
+                    user.Username = model.Email;
                     //session user                
                     HttpContext.Session.SetObject<User>(SessionKeyUser, user);
 

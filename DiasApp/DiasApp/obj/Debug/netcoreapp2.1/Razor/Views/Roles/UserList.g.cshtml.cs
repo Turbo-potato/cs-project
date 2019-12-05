@@ -67,7 +67,7 @@ using DiasApp.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(103, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "02c2a55a42404afb9bf01f2ea4647418", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "476aa1ae24da4035a6ead6823b4f1cd8", async() => {
                 BeginContext(109, 90, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>UserList</title>\r\n");
                 EndContext();
@@ -87,7 +87,7 @@ using DiasApp.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(208, 385, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84c269398782440db73d279d95f34ff4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75a290f7f4604fceb43febff56d7e56c", async() => {
                 BeginContext(214, 57, true);
                 WriteLiteral("\r\n\r\n    <h2>Users\' list</h2>\r\n    <table class=\"table\">\r\n");
                 EndContext();
@@ -111,7 +111,7 @@ using DiasApp.Models;
                 WriteLiteral("</td>\r\n                <td>\r\n                    ");
                 EndContext();
                 BeginContext(418, 97, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "23866d2618f44b7b919cadd19d5cb8f1", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06212e005a114d19b55bdbe1afe4c458", async() => {
                     BeginContext(498, 13, true);
                     WriteLiteral("Access rights");
                     EndContext();

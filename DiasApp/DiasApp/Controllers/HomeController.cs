@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using DiasApp.Models;
 using Microsoft.AspNetCore.Http;
 using DiasApp.Session;
+using Microsoft.AspNetCore.SignalR;
+using DiasApp.Hubs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DiasApp.Controllers
 {
@@ -16,10 +19,16 @@ namespace DiasApp.Controllers
         const string SessionKeyAge = "_Age";
         const string SessionKeyTime = "_Time";
         const string SessionKeyUser = "_DefaultUser";
+        private readonly IHubContext<ChatHub> _hubContext;
+
+        public HomeController(IHubContext<ChatHub> hubContext)
+        {
+            _hubContext = hubContext;
+        }
 
         public IActionResult Index()
-        {
-           // HttpContext.Session.SetString(SessionKeyName, "Jack");
+        {           
+            // HttpContext.Session.SetString(SessionKeyName, "Jack");
             //HttpContext.Session.SetInt32(SessionKeyAge, 24);
 
             //default name and age
@@ -36,11 +45,11 @@ namespace DiasApp.Controllers
             }
 
             //default user
-            if (HttpContext.Session.GetObject<User>(SessionKeyUser) == null) { 
-            User user = new User();
-            user.UserName = "none";
-            user.Email = "none";
-            HttpContext.Session.SetObject<User>(SessionKeyUser, user);
+            if (HttpContext.Session.GetObject<User>(SessionKeyUser) == null) {
+                User user = new User();
+                user.UserName = "none";
+                user.Email = "none";
+                HttpContext.Session.SetObject<User>(SessionKeyUser, user);
             }
 
             //Temp data for anonymous 
@@ -53,15 +62,15 @@ namespace DiasApp.Controllers
         {
             ViewData["Message"] = "Your application description page.";
 
-           /* if (TempData.ContainsKey("user"))
-            {
-                ViewBag.UserState = TempData["user"] as string;
-            }
+            /* if (TempData.ContainsKey("user"))
+             {
+                 ViewBag.UserState = TempData["user"] as string;
+             }
 
-            if (TempData.ContainsKey("authInfo"))
-            {
-                ViewBag.AuthInfo = TempData["authInfo"] as string;
-            }*/
+             if (TempData.ContainsKey("authInfo"))
+             {
+                 ViewBag.AuthInfo = TempData["authInfo"] as string;
+             }*/
 
             ViewBag.Name = HttpContext.Session.GetString(SessionKeyName) ?? "Anonymous";
 
@@ -70,6 +79,23 @@ namespace DiasApp.Controllers
             else
                 ViewBag.Time = "none";
             //ViewBag.Age = HttpContext.Session.GetInt32(SessionKeyAge) ?? 0;
+
+            ViewBag.DefaultUser = HttpContext.Session.GetObject<User>(SessionKeyUser);
+
+            return View();
+        }
+
+        [Authorize(Roles = "user, admin")]
+        public IActionResult Chat()
+        {
+            _hubContext.Clients.All.SendAsync("Notify", $"Chat loaded at: {DateTime.Now}");
+            ViewData["Message"] = "Online chat to talk to others";
+            ViewBag.Name = HttpContext.Session.GetString(SessionKeyName) ?? "Anonymous";
+
+            if (HttpContext.Session.GetString(SessionKeyTime) != null)
+                ViewBag.Time = HttpContext.Session.GetString(SessionKeyTime).ToString() ?? DateTime.Now.ToString();
+            else
+                ViewBag.Time = "none";
 
             ViewBag.DefaultUser = HttpContext.Session.GetObject<User>(SessionKeyUser);
 
